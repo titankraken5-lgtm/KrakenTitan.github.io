@@ -3,20 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Welcome to My Page</title>
     <style>
+        /* Full-page gradient background */
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
             text-align: center;
-            padding-top: 50px;
-            background: #f0f0f0;
+            overflow: hidden;
         }
-        h1 { color: #007acc; }
-        p { color: #333; }
+
+        /* Container for content */
+        .container {
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8);}
+            to { opacity: 1; transform: scale(1);}
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        p {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Small floating animation for fun */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating {
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
     </style>
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>Your page is live at <strong>https://<your-username>.github.io/</strong></p>
+    <div class="container">
+        <h1 class="floating">🌊 Hello, GitHub Pages! 🌊</h1>
+        <p>Your page is live at <strong>https://<your-username>.github.io/</strong></p>
+    </div>
 </body>
 </html>
